@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="CoffeeBeans">
+  <inherits name="com.google.gwt.user.User" />
+  <source path="shared" />
+
+  <inherits name="com.google.web.bindery.autobean.AutoBean" />
+
+  <generate-with class="org.dots42.coffeebeans.rebind.CoffeeBeanFactoryGenerator">
+    <when-type-assignable class="com.google.web.bindery.autobean.shared.AutoBeanFactory" />
+  </generate-with>
+</module>
