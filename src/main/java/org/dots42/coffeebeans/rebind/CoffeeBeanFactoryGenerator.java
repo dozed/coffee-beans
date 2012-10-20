@@ -511,7 +511,7 @@ public class CoffeeBeanFactoryGenerator extends Generator {
           String getterName = "get" + method.getPropertyName().substring(0, 1).toUpperCase() + method.getPropertyName().substring(1);
           sw.println("Object oldValue = %s.this.getWrapped().%s();", type.getSimpleSourceName(),
               getterName);
-          sw.println("%s.this.beforeSet(\"%s\", oldValue, %s);",
+          sw.println("%s.this.beforeSet(\"%s\", %s, oldValue);",
             type.getSimpleSourceName(), methodName, parameters[0].getName());
           sw.println("%s.this.set(\"%s\", %s);", type.getSimpleSourceName(), methodName,
               parameters[0].getName());
